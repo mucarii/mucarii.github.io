@@ -27,7 +27,7 @@ main {
 
 /* Estilo do Header Fixo */
 .header {
-    background-color: white; /* Azul Marinho */
+    background-color: white;
     height: 80px; /* Altura reduzida para estilo fixo */
     display: flex;
     align-items: center;
@@ -42,12 +42,20 @@ main {
 
 /* Estilos do rodapé */
 footer {
-    background-color: #2C3E50; /* Azul Marinho */
-    color: #FFFFFF; /* Branco */
+    background-color: #fff; 
+    color: #fff; /* Branco */
     text-align: center;
     padding: 10px 0;
     width: 100%; /* Garante que o rodapé ocupe toda a largura */
     position: relative; /* Para garantir que o footer não se sobreponha a outros elementos */
+}
+
+.footer-text {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #0000009a; /* Branco */
 }
 
 /* Responsividade */
@@ -130,26 +138,4 @@ footer {
 .btn-primary:hover {
     background-color: #F1C40F; /* Amarelo ao passar o mouse */
     transform: scale(1.05);
-}
-
-/* Estilos do Rodapé para Links */
-footer a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: #F1C40F; /* Amarelo ao passar o mouse */
-}
-
-/* Estilo de Lista Inline */
-.list-inline-item a {
-    color: #fff; /* Cor padrão dos links */
-    text-decoration: none; /* Remove sublinhado */
-}
-
-.list-inline-item a:hover {
-    color: #F1C40F; /* Amarelo ao passar o mouse */
-    text-decoration: underline; /* Sublinhado ao passar o mouse */
 }
