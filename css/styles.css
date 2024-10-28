@@ -2,13 +2,15 @@
 html, body {
     height: 100%;
     margin: 0;
+    display: flex; /* Flexbox para layout */
+    flex-direction: column; /* Direção vertical */
 }
 
+/* Estilos globais */
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Lato', sans-serif;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #F4F4F4; /* Fundo neutro para contraste */
+    color: #2C3E50; /* Cor do texto principal */
 }
 
 /* Estilos de Títulos */
@@ -18,30 +20,34 @@ h1, h2, h3, h4, h5 {
 
 /* Estilo do Main */
 main {
-    flex: 1;
+    flex: 1; /* Permite que o main ocupe o espaço restante */
+    padding-top: 80px; /* Compensa o header fixo */
     margin-bottom: 20px;
 }
 
-/* Estilo do Rodapé */
-footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: auto;
-}
-
-/* Estilo do Cabeçalho */
+/* Estilo do Header Fixo */
 .header {
-    background-image: url('img/cabecalho.jpg');
-    background-size: cover;
-    height: 720px;
+    background-color: white; /* Azul Marinho */
+    height: 80px; /* Altura reduzida para estilo fixo */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #FFFFFF; /* Branco */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     transition: background-image 0.5s ease-in-out;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #2C3E50; /* Azul Marinho */
+    color: #FFFFFF; /* Branco */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+    position: relative; /* Para garantir que o footer não se sobreponha a outros elementos */
 }
 
 /* Responsividade */
@@ -61,8 +67,8 @@ footer {
 .card {
     transition: transform 0.2s, box-shadow 0.2s;
     margin-bottom: 20px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0; /* Borda leve */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     display: flex; /* Para usar flexbox */
     flex-direction: column; /* Alinha o conteúdo na vertical */
     height: 100%; /* Para permitir que a altura seja igual */
@@ -80,6 +86,10 @@ footer {
     object-fit: cover; /* Cobre o espaço do card sem distorcer */
 }
 
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
 
 /* Efeito de Apresentação */
 .welcome {
@@ -93,16 +103,17 @@ footer {
     bottom: 20px;
     right: 20px;
     display: none;
-    background-color: #007bff;
+    background-color: #27AE60; /* Verde Escuro */
     color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    z-index: 1001; /* Garante que o botão fica acima do conteúdo */
 }
 
 .back-to-top:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Cor ao passar o mouse */
     transform: scale(1.1);
 }
 
@@ -112,12 +123,12 @@ footer {
 }
 
 .btn-primary {
-    background-color: #007bff; /* Cor do botão */
+    background-color: #27AE60; /* Verde Escuro */
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3; /* Cor ao passar o mouse */
+    background-color: #F1C40F; /* Amarelo ao passar o mouse */
     transform: scale(1.05);
 }
 
@@ -129,7 +140,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #ffcc00; /* Cor do link ao passar o mouse */
+    color: #F1C40F; /* Amarelo ao passar o mouse */
 }
 
 /* Estilo de Lista Inline */
@@ -139,6 +150,6 @@ footer a:hover {
 }
 
 .list-inline-item a:hover {
-    color: #ffcc00; /* Cor ao passar o mouse */
+    color: #F1C40F; /* Amarelo ao passar o mouse */
     text-decoration: underline; /* Sublinhado ao passar o mouse */
 }
