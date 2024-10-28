@@ -8,8 +8,8 @@ html, body {
 
 /* Estilos globais */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #EAEAEA; /* Cinza Claro */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F4F4F4; /* Fundo neutro para contraste */
     color: #2C3E50; /* Cor do texto principal */
 }
 
@@ -36,14 +36,14 @@ main {
     top: 0;
     width: 100%;
     z-index: 1000;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transition: background-image 0.5s ease-in-out;
 }
 
 /* Estilos do rodapé */
 footer {
     background-color: #fff; 
-    color: #fff; /* Branco */
+    color: #000; /* Branco */
     text-align: center;
     padding: 10px 0;
     width: 100%; /* Garante que o rodapé ocupe toda a largura */
@@ -76,7 +76,7 @@ footer {
     transition: transform 0.2s, box-shadow 0.2s;
     margin-bottom: 20px;
     border: 1px solid #e0e0e0; /* Borda leve */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Sombra sutil */
     display: flex; /* Para usar flexbox */
     flex-direction: column; /* Alinha o conteúdo na vertical */
     height: 100%; /* Para permitir que a altura seja igual */
@@ -96,7 +96,8 @@ footer {
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Aumentar a sombra ao passar o mouse */
+    background-color: #f9f9f9; /* Mudança sutil de cor de fundo */
 }
 
 /* Efeito de Apresentação */
@@ -118,6 +119,7 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     z-index: 1001; /* Garante que o botão fica acima do conteúdo */
+     opacity: 0.8; /* Sutileza na opacidade */
 }
 
 .back-to-top:hover {
@@ -138,19 +140,4 @@ footer {
 .btn-primary:hover {
     background-color: #F1C40F; /* Amarelo ao passar o mouse */
     transform: scale(1.05);
-}
-
-/* Estilos da seção de Projetos */
-.projects .card {
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.projects .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.projects img {
-    height: 200px; /* Defina uma altura fixa para as imagens */
-    object-fit: cover; /* Para evitar distorções */
 }
