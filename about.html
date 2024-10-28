@@ -20,7 +20,6 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="projects.html">Projetos</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resources.html">Recursos</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
                 </ul>
             </div>
@@ -31,7 +30,7 @@
         <h1 class="text-center">Sobre Mim</h1>
 
         <section class="mt-4 text-center">
-            <img src="img/perfil.jpg" alt="Foto de Perfil de Murilo Calore" class="rounded-circle" width="200">
+            <img src="img/perfil.jpg" alt="Foto de Perfil de Murilo Calore" class="rounded-circle shadow" width="200" style="border: 3px solid #007bff;">
             <p class="mt-3">Olá! Meu nome é <strong>Murilo</strong> e sou um aspirante a cientista de dados.</p>
         </section>
 
@@ -44,13 +43,35 @@
 
         <section class="mt-5">
             <h2>Minhas Habilidades</h2>
-            <ul class="list-group">
-                <li class="list-group-item"><i class="fas fa-code"></i> Análise de Dados com Python</li>
-                <li class="list-group-item"><i class="fas fa-robot"></i> Machine Learning e Modelagem Preditiva</li>
-                <li class="list-group-item"><i class="fas fa-chart-bar"></i> Visualização de Dados com Power BI e Matplotlib</li>
-                <li class="list-group-item"><i class="fas fa-database"></i> SQL para Manipulação de Dados</li>
-                <li class="list-group-item"><i class="fas fa-cloud"></i> Trabalho com Big Data e Ferramentas de ETL</li>
-            </ul>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <i class="fas fa-code fa-2x"></i>
+                            <h5 class="card-title">Análise de Dados</h5>
+                            <p class="card-text">Experiência em Python.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <i class="fas fa-robot fa-2x"></i>
+                            <h5 class="card-title">Machine Learning</h5>
+                            <p class="card-text">Modelagem Preditiva.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <i class="fas fa-chart-bar fa-2x"></i>
+                            <h5 class="card-title">Visualização de Dados</h5>
+                            <p class="card-text">Power BI e Matplotlib.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="mt-5">
@@ -68,6 +89,11 @@
 
     <footer class="text-center bg-primary text-white py-4">
         <p>&copy; 2024 Murilo Luiz Calore Ritto. Todos os direitos reservados.</p>
+        <div>
+            <a href="https://www.linkedin.com/in/seu-linkedin" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/seu-github" target="_blank" class="text-white mx-2"><i class="fab fa-github"></i></a>
+            <!-- Adicione mais links de redes sociais conforme necessário -->
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

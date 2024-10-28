@@ -1,71 +1,93 @@
+/* Reset e Configuração Inicial */
 html, body {
-    height: 100%; /* Define a altura total do documento */
-    margin: 0; /* Remove margens padrão do body */
+    height: 100%;
+    margin: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilos de Títulos */
 h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
 }
 
-body {
-    display: flex; /* Usar flexbox para organizar o layout */
-    flex-direction: column; /* Colocar os elementos na vertical */
-    font-family: 'Lato', sans-serif; /* Fonte padrão */
-    line-height: 1.6; /* Melhora a legibilidade */
-}
-
+/* Estilo do Main */
 main {
-    flex: 1; /* Faz o main ocupar o espaço restante da página */
-    margin-bottom: 20px; /* Espaço entre o conteúdo principal e o footer */
+    flex: 1;
+    margin-bottom: 20px;
 }
 
+/* Estilo do Rodapé */
 footer {
-    background-color: #007bff; /* Cor de fundo do footer */
-    color: white; /* Cor do texto do footer */
-    text-align: center; /* Centralizar o texto */
-    padding: 10px 0; /* Espaçamento interno do footer */
-    margin-top: auto; /* Faz o footer ir para a parte inferior */
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
 }
 
+/* Estilo do Cabeçalho */
 .header {
     background-image: url('img/cabecalho.jpg');
     background-size: cover;
-    height: 720px; /* Ajuste conforme necessário */
+    height: 720px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    transition: background-image 0.5s ease-in-out; /* Transição suave */
+    transition: background-image 0.5s ease-in-out;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     body {
-        flex-direction: column; /* Mantém a estrutura em coluna */
+        flex-direction: column;
     }
     .header {
-        height: 400px; /* Ajuste para telas menores */
+        height: 400px;
     }
     nav {
-        flex-direction: column; /* Coloca os itens do menu em coluna */
+        flex-direction: column;
     }
 }
 
+/* Estilos do Card */
 .card {
-    transition: transform 0.2s; /* Adiciona uma animação suave ao passar o mouse */
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Para usar flexbox */
+    flex-direction: column; /* Alinha o conteúdo na vertical */
+    height: 100%; /* Para permitir que a altura seja igual */
 }
 
-.card:hover {
-    transform: scale(1.05); /* Leve aumento no tamanho do cartão ao passar o mouse */
+.card-body {
+    flex-grow: 1; /* Faz o corpo do card crescer para ocupar o espaço disponível */
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo na vertical */
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
 }
 
-/* Estilos adicionais para animações */
+.card-img-top {
+    max-height: 200px; /* Limite a altura da imagem */
+    object-fit: cover; /* Cobre o espaço do card sem distorcer */
+}
+
+
+/* Efeito de Apresentação */
 .welcome {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
+/* Botão Voltar ao Topo */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -79,15 +101,27 @@ footer {
     cursor: pointer;
 }
 
+.back-to-top:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Estilos de Botões */
 .btn {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+.btn-primary {
+    background-color: #007bff; /* Cor do botão */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
     transform: scale(1.05);
 }
 
+/* Estilos do Rodapé para Links */
 footer a {
     color: white;
     text-decoration: none;
@@ -95,5 +129,16 @@ footer a {
 }
 
 footer a:hover {
-    color: #ffcc00; /* Altere para uma cor que destaque */
+    color: #ffcc00; /* Cor do link ao passar o mouse */
+}
+
+/* Estilo de Lista Inline */
+.list-inline-item a {
+    color: #fff; /* Cor padrão dos links */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+.list-inline-item a:hover {
+    color: #ffcc00; /* Cor ao passar o mouse */
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
 }
