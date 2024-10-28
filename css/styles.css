@@ -9,7 +9,7 @@ html, body {
 /* Estilos globais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #F4F4F4; /* Fundo neutro para contraste */
+    background-color: #EAEAEA; /* Cinza Claro */
     color: #2C3E50; /* Cor do texto principal */
 }
 
@@ -138,4 +138,19 @@ footer {
 .btn-primary:hover {
     background-color: #F1C40F; /* Amarelo ao passar o mouse */
     transform: scale(1.05);
+}
+
+/* Estilos da seção de Projetos */
+.projects .card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.projects .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.projects img {
+    height: 200px; /* Defina uma altura fixa para as imagens */
+    object-fit: cover; /* Para evitar distorções */
 }
