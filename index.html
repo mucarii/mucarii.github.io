@@ -3,39 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Murilo Ritto - Portfólio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Bem-vindo ao Meu Portfólio - Murilo Calore</title>
 </head>
 <body>
-    <header>
-        <h1>Murilo Ritto</h1>
-        <p>Cientista de Dados e Engenheiro de Software</p>
-        <nav>
-            <a href="#projetos">Projetos</a>
-            <a href="#sobre">Sobre Mim</a>
-            <a href="#contato">Contato</a>
+    <header class="bg-primary text-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">Meu Portfólio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="about.html">Sobre Mim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resources.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <section id="projetos">
-        <h2>Projetos</h2>
-        <!-- Projetos serão adicionados aqui -->
-    </section>
+    <main class="container mt-5 text-center">
+        <section class="intro">
+            <h1 class="welcome">Bem-vindo ao Meu Portfólio</h1>
+            <p>Sou um aspirante a cientista de dados com paixão por transformar dados em insights valiosos.</p>
+            <a href="projects.html" class="btn btn-primary btn-lg">Veja Meus Projetos</a>
+        </section>
 
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p>Descreva aqui suas habilidades e experiência, como sua trajetória em análise de dados, ciência de dados e engenharia de software.</p>
-    </section>
+        <section class="mt-5">
+            <h2>Minhas Habilidades</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Python</h5>
+                    <p>Experiência em análise de dados e automação.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Machine Learning</h5>
+                    <p>Desenvolvimento de modelos preditivos e análises.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Visualização de Dados</h5>
+                    <p>Criação de dashboards interativos e relatórios.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Email: <a href="mailto:murilo.l.calore.r@gmail.com">murilo.l.calore.r@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/murilo-calore-b1bb94207/">Murilo Calore</a></p>
-        <p>GitHub: <a href="https://github.com/mucarii">GitHub</a></p>
-    </section>
+        <section class="mt-5">
+            <h2>Últimos Posts do Blog</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><a href="post1.html">Título do Post 1</a></h5>
+                    <p>Um breve resumo do conteúdo do post 1.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5><a href="post2.html">Título do Post 2</a></h5>
+                    <p>Um breve resumo do conteúdo do post 2.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5><a href="post3.html">Título do Post 3</a></h5>
+                    <p>Um breve resumo do conteúdo do post 3.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <footer>
-        <p>&copy; 2024 Murilo Ritto</p>
+    <footer class="text-center bg-primary text-white py-4">
+        <p>&copy; 2024 Murilo Luiz Calore Ritto. Todos os direitos reservados.</p>
     </footer>
+
+    <button class="back-to-top">Voltar ao topo</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        // Animação de boas-vindas
+        window.onload = function() {
+            const welcomeText = document.querySelector('.welcome');
+            welcomeText.style.opacity = 1;
+        };
+
+        // Botão "Voltar ao topo"
+        const backToTopButton = document.querySelector('.back-to-top');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        backToTopButton.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+    </script>
 </body>
 </html>

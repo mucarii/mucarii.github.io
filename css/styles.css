@@ -1,0 +1,60 @@
+html, body {
+    height: 100%; /* Define a altura total do documento */
+    margin: 0; /* Remove margens padrão do body */
+}
+
+body {
+    display: flex; /* Usar flexbox para organizar o layout */
+    flex-direction: column; /* Colocar os elementos na vertical */
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+main {
+    flex: 1; /* Faz o main ocupar o espaço restante da página */
+    margin-bottom: 20px; /* Espaço entre o conteúdo principal e o footer */
+}
+
+footer {
+    background-color: #007bff; /* Cor de fundo do footer */
+    color: white; /* Cor do texto do footer */
+    text-align: center; /* Centralizar o texto */
+    padding: 10px 0; /* Espaçamento interno do footer */
+    margin-top: auto; /* Faz o footer ir para a parte inferior */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Mantém a estrutura em coluna */
+    }
+    nav {
+        flex-direction: column; /* Coloca os itens do menu em coluna */
+    }
+}
+
+.card {
+    transition: transform 0.2s; /* Adiciona uma animação suave ao passar o mouse */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Leve aumento no tamanho do cartão ao passar o mouse */
+}
+
+        /* Estilos adicionais para animações */
+        .welcome {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
