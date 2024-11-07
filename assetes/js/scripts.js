@@ -1,6 +1,6 @@
-// Aguarda o DOM estar completamente carregado
+// Função para mostrar o botão "Voltar ao topo"
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. Validação do Formulário de Contato
+// 1. Validação do Formulário de Contato
     const form = document.querySelector("form");
     if (form) {
         form.addEventListener("submit", function (event) {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // 2. Scroll suave para links internos
+// 2. Navegação
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // 3. Botão "Voltar ao topo"
+// 3. Botão "Voltar ao topo"
     const backToTopButton = document.createElement('button');
     backToTopButton.innerText = "Voltar ao topo";
     backToTopButton.className = "back-to-top";
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // 4. Mensagens de sucesso e erro (exemplo)
+// 4. Mensagem de sucesso
     function showMessage(type, message) {
         const messageDiv = document.createElement("div");
         messageDiv.className = type === 'success' ? 'alert alert-success' : 'alert alert-danger';
@@ -64,11 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 3000); // Remove a mensagem após 3 segundos
     }
 
-    // Exemplo de uso:
-    // showMessage('success', 'Seu formulário foi enviado com sucesso!');
-    // showMessage('error', 'Ocorreu um erro ao enviar o formulário.');
-
-    // 5. Efeitos de animação ao passar o mouse sobre os cartões (se aplicável)
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.addEventListener('mouseover', () => {
@@ -80,19 +75,4 @@ document.addEventListener("DOMContentLoaded", function () {
             card.style.transform = "scale(1)";
         });
     });
-
-    // 6. Carregamento dinâmico de conteúdo (exemplo para blog)
-    /*
-    fetch('posts.json')
-        .then(response => response.json())
-        .then(data => {
-            const blogContainer = document.querySelector('.blog-container');
-            data.posts.forEach(post => {
-                const postElement = document.createElement('div');
-                postElement.innerHTML = `<h2>${post.title}</h2><p>${post.summary}</p>`;
-                blogContainer.appendChild(postElement);
-            });
-        })
-        .catch(error => console.error('Erro ao carregar os posts:', error));
-    */
 });
