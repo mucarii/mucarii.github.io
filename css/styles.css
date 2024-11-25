@@ -55,7 +55,7 @@ footer {
     padding: 0;
     font-size: 18px;
     line-height: 1.5;
-    color: #0000009a; /* Branco */
+    color: #fff; 
 }
 
 /* Responsividade */
@@ -130,14 +130,4 @@ footer {
 /* Estilos de Botões */
 .btn {
     transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn-primary {
-    background-color: #0056b3;
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: #F1C40F; /* Amarelo ao passar o mouse */
-    transform: scale(1.05);
 }

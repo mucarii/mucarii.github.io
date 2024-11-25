@@ -1,0 +1,92 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ca0000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+header img {
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+/* Contato */
+.contato {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.contato a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.contato a:hover {
+    text-decoration: underline;
+}
+
+/* Seções */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+section h2 {
+    background-color: #ca0000;
+    color: #fff;
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+    font-size: 1.5em;
+    border-radius: 5px 5px 0 0;
+}
+
+section p, section ul, section ol, section dl {
+    margin: 0;
+    padding: 0;
+}
+
+section ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+section ul li::before {
+    content: "• ";
+    color: #ca0000; 
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: #666;
+}
